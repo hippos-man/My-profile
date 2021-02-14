@@ -31,7 +31,6 @@ function setCardOverray() {
 function resetCardOverray() {
     window.onclick = function(event) {
         if (!event.srcElement.offsetParent.matches('.card')) {
-            console.log('reset!');
             const overrays = document.querySelectorAll('.overray');
             overrays.forEach((e) => {
                 e.style.display = "none";
