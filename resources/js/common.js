@@ -1,7 +1,8 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     setSeeMoreButton();
     setCardOverray();
-    resetCardOverray();
+    setDropdownMenu();
+    resetCard();
 });
 
 function setSeeMoreButton() {
@@ -28,15 +29,19 @@ function setCardOverray() {
     });
 }
 
-function resetCardOverray() {
+function resetCard() {
     window.onclick = function(event) {
         if (!event.srcElement.offsetParent.matches('.card')) {
-            const overrays = document.querySelectorAll('.overray');
-            overrays.forEach((e) => {
-                e.style.display = "none";
-            });
+            resetCardOverray();
         }
     }
+}
+
+function resetCardOverray() {
+    const overrays = document.querySelectorAll('.overray');
+    overrays.forEach((e) => {
+        e.style.display = "none";
+    });
 }
 
 function turnOnCardOverray(target) {
@@ -46,3 +51,25 @@ function turnOnCardOverray(target) {
 function turnOffCardOveray(target) {
     target.style.display = "none";
 }
+
+function setDropdownMenu() {
+    const dropDownBtn = document.querySelector('.menu-icon i');
+    if (dropDownBtn != null) {
+        dropDownBtn.addEventListener('click', (e) => {
+            switchDropdown();
+        });
+    }
+}
+
+function switchDropdown() {
+    let dropdown = document.getElementById('dropdown-content');
+    let status = dropdown.style.display;
+    if(status == null || status == '') {
+        dropdown.style.display = "flex";
+    } else if (status === "none") {
+        dropdown.style.display = "flex";
+    } else {
+        dropdown.style.display = "none";
+    }
+}
+

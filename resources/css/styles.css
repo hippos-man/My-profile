@@ -28,7 +28,7 @@ nav {
     z-index: 5;
 }
 
-i.fa-bars {
+div.menu-icon, .dropdown{
     display: none;
 }
 
@@ -56,7 +56,7 @@ i.fa-bars {
 
 section#home .container {
     background-image: url("/resources/image/home-bg.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: auto;
 }
@@ -80,7 +80,8 @@ section#home {
     width: 100%;
 }
 
-button {
+
+button#cta-button {
     font-size: 22px;
     padding: 10px 20px;
     color: white;
@@ -98,6 +99,11 @@ section#home button:hover {
 h2 {
     text-align: center;
     font-size: 40px;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 3px;
+    border-bottom-width: 5px;
+    max-width: 180px;
+    margin: 30px auto;
 }
 
 section#about {
@@ -229,7 +235,9 @@ section#contact {
 
 section#contact h2 {
     color: white;
-    margin: 0 0 33.2px 0;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+    border-bottom-width: 5px;
 }
 
 .contact-items {
@@ -255,10 +263,6 @@ section#contact h2 {
 
 .contact-item i:hover,  .contact-item a:hover{
     color: #e31b6d;
-}
-
-.fa-github-square, .fa-linkedin {
-    color: white;
 }
 
 div.contact-item {
@@ -308,6 +312,43 @@ span.footer-year {
 /** Start Smartphone View **/
 @media (max-width: 1000px) {
     
+    .nav-wrapper {
+        z-index: 6;
+    }
+
+    .menu-icon i {
+        cursor: pointer;
+    }
+
+    div.menu-icon {
+        display: block;
+    }
+
+    button#menu-btn {
+        border: none;
+        background: none;
+    }
+
+    .dropdown {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        background-color: #333333;
+        padding: 15px 20px;
+    }
+
+    .dropdown a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .dropdown a:hover {
+        color: #12f7e2;
+    }
+
+
     section#home h1 {
         font-size: 30px;
     }
