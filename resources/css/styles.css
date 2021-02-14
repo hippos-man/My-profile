@@ -24,17 +24,19 @@ body {
 nav {
     width: 100%;
     height: 50px;
-    text-align: left;
     background-color: #1B242F;
     z-index: 5;
+}
+
+i.fa-bars {
+    display: none;
 }
 
 .link-wrapper {
     width: 100%;
     max-width: 1200px;
     flex-direction: row;
-    text-align: left;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .page-link {
@@ -56,7 +58,7 @@ section#home .container {
     background-image: url("/resources/image/home-bg.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: auto;
 }
 
 section#home h1 {
@@ -87,8 +89,6 @@ button {
     transition: background-color 0.8s;
 }
 
-    
-
 section#home button:hover {
     cursor: pointer;
     background-color: #e31b6d;
@@ -101,7 +101,7 @@ h2 {
 }
 
 section#about {
-    padding: 50px 250px
+    padding: 50px 250px;
 }
 
 a.text-link {
@@ -159,6 +159,7 @@ span.skill-title {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -304,3 +305,73 @@ span.footer-year {
     cursor: pointer;
 }
 
+/** Start Smartphone View **/
+@media (max-width: 1000px) {
+    
+    section#home h1 {
+        font-size: 30px;
+    }
+
+    .link-wrapper {
+        justify-content: flex-end;
+    }
+
+    nav .page-link {
+        display: none;
+    }
+
+    .menu-icon {
+        margin: 0 20px;
+    }
+
+    i.fa-bars {
+        color: white;
+        display: block;
+    }
+
+    section#home .container {
+        background-image: url("/resources/image/home-bg-vertical.jpg");
+    }
+
+    .profile {
+        flex-wrap: wrap;
+    }
+
+    section#about {
+        padding: 10px 40px;
+    }
+
+    .stack {
+        align-items: center;
+        text-align: center;
+    }
+
+    .stack-items {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+    .contact-text-link{
+        display: none;
+    }
+
+    .contact-item {
+        justify-content: center;
+    }
+
+    .contact-item i {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/** End Smartphone View **/
