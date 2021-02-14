@@ -11,25 +11,35 @@
         <script src="https://kit.fontawesome.com/19f068fb8c.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav class="flex sticky">
-            <div class="flex link-wrapper">
-                <div class="page-link">
-                    <a href="#home">HOME</a>
+        <div class="nav-wrapper sticky">
+            <nav class="flex">
+                <div class="flex link-wrapper">
+                    <div class="page-link">
+                        <a href="#home">HOME</a>
+                    </div>
+                    <div class="page-link">
+                        <a href="#about">ABOUT</a>
+                    </div>
+                    <div class="page-link">
+                        <a href="#projects">PROJECTS</a>
+                    </div>
+                    <div class="page-link">
+                        <a href="#contact">CONTACT</a>
+                    </div>
+                    <div class="menu-icon">
+                        <button id="menu-btn">
+                            <i class="fas fa-bars fa-2x"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="page-link">
-                    <a href="#about">ABOUT</a>
-                </div>
-                <div class="page-link">
-                    <a href="#projects">PROJECTS</a>
-                </div>
-                <div class="page-link">
-                    <a href="#contact">CONTACT</a>
-                </div>
-                <div class="menu-icon">
-                    <i class="fas fa-bars fa-2x"></i>
-                </div>
+            </nav>
+            <div id="dropdown-content" class="dropdown">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#projects">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
             </div>
-        </nav>
+        </div>
         <section id="home" class="flex">
             
             <div class="container flex">
@@ -38,7 +48,7 @@
                     <h1>Hello, I'm <span class="highlight">Manabu Takeya</span><br>I'm a web developer</h1>
                 </div>
                 <div class="button">
-                    <button>See more</button>
+                    <button id="cta-button">See more</button>
                 </div>
             </div>
         </section>
@@ -161,6 +171,11 @@
                     <div class="contact-item">
                         <a class="icon-link" href="https://www.linkedin.com/in/manabu-takeya/"><i class="fab fa-linkedin fa-5x"></i></a>
                         <a class="contact-text-link" href="https://www.linkedin.com/in/manabu-takeya/">https://www.linkedin.com/in/manabu-takeya/</a>
+                    </div>
+                    <div class="contact-item">
+                        <a class="icon-link" href="https://twitter.com/new_manabee"><i class="fab fa-twitter-square fa-5x"></i>
+                        </a>
+                        <a class="contact-text-link" href="https://twitter.com/new_manabee">https://twitter.com/new_manabee</a>
                     </div>
                 </div>
             </div>
