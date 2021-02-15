@@ -390,6 +390,7 @@ span.footer-year {
     .stack {
         align-items: center;
         text-align: center;
+        padding: 30px 0;
     }
 
     .stack-items {
