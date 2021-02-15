@@ -392,6 +392,10 @@ span.footer-year {
         margin-bottom: 20px;
     }
 
+    section#projects {
+        padding: 50px 15px;
+    }
+
     .cards {
         flex-direction: column;
     }
@@ -412,6 +416,10 @@ span.footer-year {
     .contact-item i {
         width: 100%;
         margin: 0 auto;
+    }
+
+    section#contact {
+        padding: 50px 0;
     }
 }
 
