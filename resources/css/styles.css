@@ -21,11 +21,14 @@ body {
     top: 0;
 }
 
+.nav-wrapper {
+    z-index: 5;
+}
+
 nav {
     width: 100%;
     height: 50px;
     background-color: #1B242F;
-    z-index: 5;
 }
 
 div.menu-icon, .dropdown{
@@ -331,17 +334,22 @@ span.footer-year {
 
     .dropdown {
         display: none;
-        flex-direction: column;
         width: 100%;
         position: absolute;
         top: 50px;
         background-color: #333333;
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
         padding: 15px 20px;
     }
 
     .dropdown a {
         color: white;
         text-decoration: none;
+        margin-bottom: 10px;
     }
 
     .dropdown a:hover {
@@ -379,12 +387,13 @@ span.footer-year {
     }
 
     section#about {
-        padding: 10px 40px;
+        padding: 50px 40px;
     }
 
     .stack {
         align-items: center;
         text-align: center;
+        padding: 30px 0;
     }
 
     .stack-items {

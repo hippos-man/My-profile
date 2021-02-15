@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     setSeeMoreButton();
     setCardOverray();
     setDropdownMenu();
+    dropdownButtonListener();
     resetCard();
 });
 
@@ -21,7 +22,7 @@ function setCardOverray() {
     const cards = document.querySelectorAll('.card');
     cards.forEach((element)=>{
         element.addEventListener('click' , (event) => {
-            let target = event.srcElement.offsetParent.children[0];
+            let target = event.target.offsetParent.children[0];
             if (target.className == "overray"){
                 turnOnCardOverray(target);
             }
@@ -31,7 +32,7 @@ function setCardOverray() {
 
 function resetCard() {
     window.onclick = function(event) {
-        if (!event.srcElement.offsetParent.matches('.card')) {
+        if (event.target.offsetParent != null && !event.target.offsetParent.matches('.card')) {
             resetCardOverray();
         }
     }
@@ -59,6 +60,15 @@ function setDropdownMenu() {
             switchDropdown();
         });
     }
+}
+
+function dropdownButtonListener() {
+    let menuElements = document.querySelectorAll("#dropdown-content a");
+    menuElements.forEach((menu)=> {
+        menu.addEventListener('click', () =>{
+            switchDropdown();
+        });
+    });
 }
 
 function switchDropdown() {
