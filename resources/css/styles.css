@@ -70,8 +70,17 @@ section#home h1 {
     color: white;
 }
 
-span.highlight {
+section#home p {
+    text-align: center;
+    color: white;
+}
+
+span.highlight-blue {
     color: #12f7e2;
+}
+
+span.highlight-red {
+    color: #e31b6d;
 }
 
 section#home {
